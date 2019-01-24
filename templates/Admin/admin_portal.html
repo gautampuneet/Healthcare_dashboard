@@ -1,0 +1,17 @@
+{% extends 'base_layout.html' %}
+
+
+
+	<li>
+        <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+        	{% csrf_token %}
+			{{ form }}                    
+            <button type="submit">Logout</button>
+
+        </form>
+    </li>
+	
+	{% block content %}		
+		<h1>ADMIN PORTAL</h1>
+	{%endblock %}
+	
